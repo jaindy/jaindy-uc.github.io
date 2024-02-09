@@ -122,94 +122,86 @@
 			</section>
 			<hr class="m-0" />
 			
-				<hr class="m-0" />
-				<!-- Awards-->
-				<section class="resume-section" id="awards">
-					<div class="resume-section-content">
-						<h2 class="mb-5">Awards & Certifications</h2>
-						<ul class="fa-ul mb-0">
-							<li>
-								<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+			<hr class="m-0" />
+			<!-- Awards-->
+			<section class="resume-section" id="awards">
+				<div class="resume-section-content">
+					<h2 class="mb-5">Awards & Certifications</h2>
+					<ul class="fa-ul mb-0">
+						<li>
+							<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
 
-								Microsoft Azure Fundamental: AZ-900 Certified.
-							</li>
-							<li>
-								<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-								'North Star' award for great work in project at Accenture.
-							</li>
+							Microsoft Azure Fundamental: AZ-900 Certified.
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+							'North Star' award for great work in project at Accenture.
+						</li>
 
 
-							<li>
-								<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+						<li>
+							<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
 
-								'Star Performer' of the month award for contribution in the development of application in DNB.
-							</li>
-							<li>
-								<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+							'Star Performer' of the month award for contribution in the development of application in DNB.
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
 
-								'Emerging Player' of the month award for resolving the issues with application hosted on IIS.
-							</li>
-							<li>
-								<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+							'Emerging Player' of the month award for resolving the issues with application hosted on IIS.
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
 
-								'ACE client and customer' award for timely deliveries and resolution of live production issues.
-							</li>
-							<li>
-								<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+							'ACE client and customer' award for timely deliveries and resolution of live production issues.
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
 
-								'On the spot' award for playing akey role in completing a critical project within tight deadline for DNB at TCS.
-							</li>
+							'On the spot' award for playing akey role in completing a critical project within tight deadline for DNB at TCS.
+						</li>
 
-							<li>
-								<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-								'Act as a True Partner' award for assisting with day to day tasks and consistently providing great team assistance.
-							</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+							'Act as a True Partner' award for assisting with day to day tasks and consistently providing great team assistance.
+						</li>
 
-						</ul>
-					</div>
-				</section>
-			</div>
-			<!-- Bootstrap core JS-->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-			<!-- Core theme JS-->
-			<script src="js/scripts.js"></script>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<!-- Bootstrap core JS-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Core theme JS-->
+		<script src="js/scripts.js"></script>
 
-			<script>
-        	/*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
-				window.addEventListener('DOMContentLoaded', event => {
+		<script>
+			
+			window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
-					const sideNav = document.body.querySelector('#sideNav');
-					if (sideNav) {
-						new bootstrap.ScrollSpy(document.body, {
-							target: '#sideNav',
-							rootMargin: '0px 0px -40%',
-						});
-					};
+				const sideNav = document.body.querySelector('#sideNav');
+				if (sideNav) {
+					new bootstrap.ScrollSpy(document.body, {
+						target: '#sideNav',
+						rootMargin: '0px 0px -40%',
+					});
+				};
 
     // Collapse responsive navbar when toggler is visible
-					const navbarToggler = document.body.querySelector('.navbar-toggler');
-					const responsiveNavItems = [].slice.call(
-						document.querySelectorAll('#navbarResponsive .nav-link')
-						);
-					responsiveNavItems.map(function (responsiveNavItem) {
-						responsiveNavItem.addEventListener('click', () => {
-							if (window.getComputedStyle(navbarToggler).display !== 'none') {
-								navbarToggler.click();
-							}
-						});
+				const navbarToggler = document.body.querySelector('.navbar-toggler');
+				const responsiveNavItems = [].slice.call(
+					document.querySelectorAll('#navbarResponsive .nav-link')
+					);
+				responsiveNavItems.map(function (responsiveNavItem) {
+					responsiveNavItem.addEventListener('click', () => {
+						if (window.getComputedStyle(navbarToggler).display !== 'none') {
+							navbarToggler.click();
+						}
 					});
-
 				});
 
-			</script>
-		</body>
-		</html>
+			});
+
+		</script>
+	</body>
+	</html>
