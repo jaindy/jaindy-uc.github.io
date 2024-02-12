@@ -13,6 +13,31 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<!-- Core theme CSS (includes Bootstrap)-->
 	<link href="style.css" rel="stylesheet" />
+	<script>
+		function displayTime(){
+			document.getElementById('digital-clock').innerHTML="" +new Date();
+
+		}
+		setInterval(displayTime,500);
+	</script>
+	<script src="https://waph-uc.github.io/clock.js"></script>
+
+		<script>
+
+			var canvas= document.getElementById("analog-clock");
+			var ctx=canvas.getContext("2d");
+			var radius= canvas.height / 2;
+
+			ctx.translate(radius,radius);
+			radius=radius*0.90;
+			setInterval(drawClock,1000);
+
+			function drawClock(){
+				drawFace(ctx,radius);
+				drawNumbers(ctx,radius);
+				drawTime(ctx,radius);
+			}
+		</script>
 
 </head>
 <body id="page-top">
@@ -22,6 +47,7 @@
 			<span class="d-block d-lg-none">Divayni Jain</span>
 			<span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="Divyani_Jain.jpg" alt="..." /></span>
 		</a>
+
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav">
@@ -31,12 +57,13 @@
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="waph.html">Course Details</a></li>
-				
-
-
 			</ul>
 		</div>
-		
+		<div>
+			
+			<canvas id="analog-clock" width="150" height="150"></canvas>
+
+		</div>
 	</nav>
 	<!-- Page Content-->
 	<div class="container-fluid p-0">
@@ -53,15 +80,15 @@
 				9966 Arbor Montgomery Ln· Cincinnati, OH 45249 · (513) 325-3776 ·
 				<a href="mailto:jaindy@mail.uc.edu">jaindy@mail.uc.edu</a>
 			</div>
-			<p class="lead mb-5">Experienced Software developer with a demonstrated history of working in Information Technology and Services industry. IT professional skilled in .NET MVC, C#, Angular 2, HTML5, CSS3, SQL server.</p>
+			<p class="lead mb-5">Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. Worked across domains and gained diverse experience in engaging with stakeholders located in multiple parts of the globe. IT professional skilled in .NET MVC, C#, Angular 2, HTML5, CSS3, SQL server.</p>
+
+			<div id="digital-clock" onload="displayTime()"></div>
 			<div class="social-icons">
 				<a class="social-icon" href="https://www.linkedin.com/in/divyanijain04/"><i class="fab fa-linkedin-in"></i></a>
 				<a class="social-icon" href="https://github.com/jaindy"><i class="fab fa-github"></i></a>
 
-			</div>
-
+			</div><br>
 		</div>
-
 
 	</section>
 
@@ -74,7 +101,16 @@
 				<div class="flex-grow-1">
 					<h3 class="mb-0">Custom Software Engineering Team Lead</h3>
 					<div class="subheading mb-3">Accenture</div>
-					<p></p>
+					<ul>
+
+						<li>Automated the process to identify and fix the pending Issuance policies on daily basis. </li>
+						<li>Automated the process for uploading reward point directly in backend system.</li>
+						<li>Key role for identifying impacted policies for reported issues in AIP Duck creek database.</li>
+						<li>Managed Software Engineers created and assigned tasks and provided performance evaluation feedback for direct reportees.</li>
+						<li>Enhancement for SCI IT validation project for variety of LOBs-like commercial Auto, BOP, UMB, and CYBER. It is used to test that all servers and third-party systems are up and running which include creation and issuance for SCI LOBs (BOP, CYBER, and UMB).</li>
+						<li>Designed a tool for calculating premium breakup and document generation for variety of LOBs-like Auto, BMQ.</li>
+						<li>Provided resolution to the production issues and received appreciation for resolving them effectively in scheduled time frame.</li>
+					</ul>
 				</div>
 				<div class="flex-shrink-0"><span class="text-primary">October 2019 - December 2022</span></div>
 			</div>
@@ -82,7 +118,15 @@
 				<div class="flex-grow-1">
 					<h3 class="mb-0">System Engineer</h3>
 					<div class="subheading mb-3">Tata Consultancy Services</div>
-					<p></p>
+					<ul>
+
+						<li>As a developer, worked on ASP.NET Web API and SQL server database for Master card Upgrade Project for DNB Bank ASA, Norway </li>
+						<li>Created restful API services using ASP.NET Web API. Used swagger and SoapUI to test and automate Web API.</li>
+						<li>Developed various SQL procedures, Triggers and worked on performance optimization.</li>
+						<li>Automated the manual record insertion process with the use of flat files via SSIS. Used NUnit framework to build and test WEBAPI.</li>
+						<li>Involved in UAT and production environment improvement and deployments. Performed unit testing.</li><li>Used WEB API, Angular 2, HTML5, CSS3 and Bootstrap as a front end and backend developer</li>
+						<li>Streamlined the project by interacting with the client to understand, analyze and follow coding standards of Angular development.</li>
+					</ul>
 				</div>
 				<div class="flex-shrink-0"><span class="text-primary">November 2016 - October 2019</span></div>
 			</div>
@@ -98,8 +142,6 @@
 				<div class="flex-grow-1">
 					<h3 class="mb-0">University of Cincinnati</h3>
 					<div class="subheading mb-3">Master of Science-Information Technology</div>
-					<div></div>
-
 				</div>
 				<div class="flex-shrink-0"><span class="text-primary">Jan - 2024</span></div>
 			</div>
@@ -107,9 +149,25 @@
 				<div class="flex-grow-1">
 					<h3 class="mb-0">Shri Vaishnav Institute of Technology and Science</h3>
 					<div class="subheading mb-3">Bachelor of Engineering-Information Technology</div>
-					<p>CGPA: 7.89</p>
+					<p>CGPA: 7.89</p><br>
 				</div>
 				<div class="flex-shrink-0"><span class="text-primary">June 2012 - June 2016</span></div>
+			</div>
+			<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+				<div class="flex-grow-1">
+					<h3 class="mb-0">Higher Secondary School - M.P Board, India </h3>
+					<div class="subheading mb-3">Grade XII </div>
+					<p>86%</p>			
+				</div>
+				<div class="flex-shrink-0"><span class="text-primary">June 2011 – May 2012</span></div>
+			</div>
+			<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+				<div class="flex-grow-1">
+					<h3 class="mb-0">Secondary School – M.P Board, India </h3>
+					<div class="subheading mb-3">Grade X </div>
+					<p>88.5%</p>
+				</div>
+				<div class="flex-shrink-0"><span class="text-primary">June 2009 – May 2010</span></div>
 			</div>
 		</div>
 	</section>
@@ -119,16 +177,11 @@
 		<div class="resume-section-content">
 			<h2 class="mb-5">Skills</h2>
 			<h3 class="mb-0">Programming Languages & Tools</h3><br>
-			<ul class="class="mb-3">
+			<ul class="mb-3">
 				<li class="subheading mb-0">Software and Programing Skills: C#,ASP.NET MVC, WEBAPI, SQL SERVER, HTML5, CSS3, ANGULAR2, Visual Studio 2017</li><br/>
-
 				<li class="subheading mb-0">Tools: JIRA, ServiceNow, Appdynamics, Teamcity, Octopus, Kibana, SoapUI, Swagger, Postman</li><br>
 				<li class="subheading mb-0">Methodologies: Agile and waterfall</li><br>
 				<li class="subheading mb-0">Version Control: TFS, GIT </li><br>
-
-
-
-
 			</ul>
 
 		</section>
@@ -178,8 +231,7 @@
 					</li>
 
 				</ul>
-				<br>
-				<hr>
+			
 
 
 			</section>
@@ -242,11 +294,10 @@ alert("my cookie: " +document.cookie);
 		</script>
 
 		<footer class="container-fluid bg-4 text-center">
+			<p> <a href="https://info.flagcounter.com/GSHO"><img src="https://s11.flagcounter.com/count2/GSHO/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></p>
+			
 			<div style="background-color:yellow;color: black;" id="jokeapi" onload="callJokeApi()"></div>
-			<a href="https://info.flagcounter.com/GSHO"><img src="https://s11.flagcounter.com/count2/GSHO/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-
-		</div>
-		
+			
 	</footer>
 </body>
 </html>
