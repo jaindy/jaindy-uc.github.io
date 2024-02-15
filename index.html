@@ -46,9 +46,10 @@
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="waph.html">Course Details</a></li>
 				<hr style="color:white;"><br>
-				<li style="color:white;">ProfileViewer <a href="https://info.flagcounter.com/GSHO"><img src="https://s11.flagcounter.com/count2/GSHO/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></li>
-				<br>
+							
 				<li><canvas id="canvas" width="100" height="100" style="background-color:#333"></canvas>
+					<li style="color:white;">ProfileViewer <a href="https://info.flagcounter.com/GSHO"><img src="https://s11.flagcounter.com/count2/GSHO/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></li>
+
 
 		</li>
 	
@@ -379,50 +380,27 @@ function drawHand(ctx, pos, length, width) {
 
 // javascript to remember user
   function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = expires;
+
   document.cookie="lastVisit="+new Date();
  
   
 }
 
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
 
-function checkCookie() {
-  let user = getCookie("username");
- 
-  if (user != "") {
-  	let date="lastVisit="+new Date();
     
-    alert("Welcome Back! " + date);
-  } else {
-     user = "jaindy";
-     if (user != "" && user != null) {
+function checkCookie() {
+ 
        setCookie("lastVisit", new Date(), 7);
+       alert("Welcome Back! your lastvisit is "+document.cookie);
      }
-  }
-}
+  
+
 
 
 		</script>
 
 		<footer class="container-fluid bg-4 text-center">
+			
 			
 			<div style="background-color:yellow;color: black;" id="jokeapi" onload="callJokeApi()"></div>
 
