@@ -46,17 +46,26 @@
 		<a class="navbar-brand js-scroll-trigger" href="#page-top">
 			<span class="d-block d-lg-none">Divayni Jain</span>
 			<span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="Divyani_Jain.jpg" alt="..." /></span>
+
 		</a>
 
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav">
+				<ul class="navbar-nav">
+					<span style="color: white;font-size: xx-large;"><b>Divyani Jain</b></span>
+						
+			<br>
+
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="waph.html">Course Details</a></li>
+				<hr style="color:white;">
+				<li style="color:white;">ProfileViewer <a href="https://info.flagcounter.com/GSHO"><img src="https://s11.flagcounter.com/count2/GSHO/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></li>
+				<br>
+	
 			</ul>
 		</div>
 		<div>
@@ -78,8 +87,10 @@
 			</h1>
 			<div class="subheading mb-5">
 				9966 Arbor Montgomery Ln· Cincinnati, OH 45249 · (513) 325-3776 ·
-				<a href="mailto:jaindy@mail.uc.edu">jaindy@mail.uc.edu</a>
+				<a id="email" onclick="showhideEmail()">Email</a>
+				
 			</div>
+
 			<p class="lead mb-5">Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. Worked across domains and gained diverse experience in engaging with stakeholders located in multiple parts of the globe. IT professional skilled in .NET MVC, C#, Angular 2, HTML5, CSS3, SQL server.</p>
 
 			<div id="digital-clock" onload="displayTime()"></div>
@@ -270,16 +281,16 @@
 			});
 			function callJokeApi(){
 
-				$.get("https://v2.jokeapi.dev/joke/Programming?type=single",
+				$.get("https://v2.jokeapi.dev/joke/Any?type=single",
 					function(result){
 						console.log("From jokeapi"+JSON.stringify(result));
-						$("#jokeapi").html("A Programming joke of the day:"+result.joke);
+						$("#jokeapi").html("A joke of the day:"+result.joke);
 					});
 			}
 			callJokeApi();
 			setInterval(callJokeApi,6000);
 
-
+			
 
 //other code
 /*if (document.cookie.indexOf("username") <0 ){
@@ -290,13 +301,27 @@ document.cookie = "username=YOURusername";
 alert("my cookie: " +document.cookie);
 }*/
 
+var shown= false;
+function showhideEmail(){
+	if(shown){
+		document.getElementById('email').innerHTML="Email";
+		shown =false;
+
+	}else{
+
+		var myemail="<a href='mailto:jaindy"+"@"+"mail.uc.edu'>jaindy"+"@"+"mail.uc.edu</a>";
+		document.getElementById('email').innerHTML=myemail;
+		shown=true;
+	}
+}
 
 		</script>
 
 		<footer class="container-fluid bg-4 text-center">
-			<p> <a href="https://info.flagcounter.com/GSHO"><img src="https://s11.flagcounter.com/count2/GSHO/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></p>
 			
 			<div style="background-color:yellow;color: black;" id="jokeapi" onload="callJokeApi()"></div>
+
+			<img src="https://imgs.xkcd.com/comics/research_account.png"></img>
 			
 	</footer>
 </body>
